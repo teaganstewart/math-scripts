@@ -7,14 +7,14 @@ namespace App
         int first;
         int second;
 
-        // Gets the user's input for the GCD calculation. Requires to positive integers.
-        void getInput() {
+        // Gets the user's input for the gcd calculation. Requires to positive integers.
+        void GetInput() {
             
             for(int i = 0; i < 2; i++) {
                 Console.Write("Enter the " + ((i ==0) ? "first" : "second") + " number- "); 
                 
                 string s = Console.ReadLine();
-                while(!checkInput(s)) {
+                while(!CheckInput(s)) {
                     Console.WriteLine("Not a correct number. Please enter a number > 0.");
                     Console.Write("Enter the first number- ");
                     s = Console.ReadLine();  
@@ -35,7 +35,7 @@ namespace App
         
         // Makes sure that the users input is positive and an integer.
         /// <param name="n">The user's input.</param>
-        bool checkInput(string str) {
+        bool CheckInput(string str) {
             int value;
             if (int.TryParse(str, out value)) {
                 if(value > 0) {
@@ -46,7 +46,7 @@ namespace App
         }
 
         // Calculates the Remainder from the division of two numbers.
-        int getRemainder(int a, int b) {
+        int GetRemainder(int a, int b) {
             
             while(a >= b) {
                 a-=b;
@@ -56,35 +56,36 @@ namespace App
         }
 
         // Calculates the result of dividing two numbers.
-        int getDivision(int a, int b) {
+        int GetDivision(int a, int b) {
             int c = a/b;
             return c;
         }
 
-        void gcd() {
-            getInput();
+        // Carries out the euclidian algorithm using the remainder and division algorithms.
+        void Gcd() {
+            GetInput();
 
-            int remainder = getRemainder(first, second);
-            int divisor = getDivision(first, second);
+            int remainder = GetRemainder(first, second);
+            int divisor = GetDivision(first, second);
 
             while(remainder != 0) {
                 first = second;
                 second = remainder;
 
-                remainder = getRemainder(first, second);
-                divisor = getDivision(first, second);
+                remainder = GetRemainder(first, second);
+                divisor = GetDivision(first, second);
                 
             }
 
             int answer = first/divisor;
             Console.WriteLine("Answer- " + answer);
-            Console.WriteLine("Remainder- " + getRemainder(first, second));
-            Console.WriteLine("Division- " + getDivision(first, second));
+            Console.WriteLine("Remainder- " + GetRemainder(first, second));
+            Console.WriteLine("Division- " + GetDivision(first, second));
         }
 
         static void Main(string[] args)
         {
-            new Program().gcd();
+            new Program().Gcd();
         }
     }
 }

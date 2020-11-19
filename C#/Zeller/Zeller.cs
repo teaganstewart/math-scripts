@@ -4,54 +4,111 @@ namespace App
 {
     class ZellerBirthday
     {
-        int[] days = new int[] {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        string[] months = new string[] {"January", "February", "March", "April", "May", "June", "July", 
-                            "August", "September", "October", "November", "December"};
+        int[] days = new int[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        string[] months = new string[] {"january", "february", "march", "april", "may", "june", 
+                                        "july", "august", "september", "october", "november", "december"};
 
-        void getInput() {
+        // Gets the user's input for their date of birth.
+        void GetInput() {
+
+            // First check the month as it affects the valid days and months.
+            Console.Write("Enter your year of birth- ");
+            string year = Console.ReadLine();
+
+            while(!CheckNumber(year)) {
+
+                Console.WriteLine("Not a valid year. Must be 0 < year < 2020.");
+                Console.Write("Enter your year of birth- ");
+                year = Console.ReadLine();
+            }
+
+            int yearNumber = Int32.Parse(year);
+
+            // Second check the month as it affects the valid days.
+            Console.Write("Enter your month of birth- ");
+            string month = Console.ReadLine().ToLower();
+            
+            while(!CheckMonthInput(month)) {
+                
+                Console.WriteLine("Not a valid month.");
+                Console.Write("Enter your month of birth- ");
+                month = Console.ReadLine().ToLower();
+            }
+
+            // Last check if the day is valid based on the month and year given.
             Console.Write("Enter your day of birth- "); 
             string day = Console.ReadLine();
 
-            Console.Write("Enter your month of birth- ");
-            string month = Console.ReadLine();
-            month = char.ToUpper(month[0]) + month.Substring(1);
+            while(!CheckDayInput(day, month, yearNumber)) {
 
-            Console.Write("Enter you year of birth.");
-            string year = Console.ReadLine();
+                Console.WriteLine("Not a valid day based on the month and year.");
+                Console.Write("Enter your day of birth- "); 
+                day = Console.ReadLine();
+            }    
 
-            checkMonthInput(month);
+            int dayNumber = Int32.Parse(day);
         }
 
-        void checkNumber(string str) {
+        // Checks whether a number is valid.
+        /// <param value="str"> The string value of the number. </param>
+        bool CheckNumber(string str) {
             int value;
             if(int.TryParse(str, out value)) {
-                
+                if(value > 0 && value <= 2020) {
+                    return true;
+                }
             }
+
+            return false;
         }
 
-        void checkDayInput(string str) {
-            
+        // Checks whether day is valid based on the month.
+        bool CheckDayInput(string day, string month, int year) {
+            if(CheckNumber(day)) {
+                int dayNumber = Int32.Parse(day);
+                int index = Array.IndexOf(months, month);
+                if(index == 1) {
+                    if(checkLeapYear(year)) {
+                        days[1] = 29;
+                     }
+                }
+                if(dayNumber > 0 && dayNumber <= days[index]) {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
-        void checkMonthInput(string month) {
-            Console.WriteLine(month);
+        // Checks the given year, so I know whether there are 29 or 28 days in February.
+        bool checkLeapYear(int year) {
+            if(year % 4 == 0) {
+                if(year % 100 == 0) {
+                    if(year % 400 == 0) {
+                        return true;
+                    } 
+                }
+                else {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
-        void zeller() {
-            getInput();
-        }
-
-        void checkDay() {
+        // Checks if the month entered is valid and in the list.
+        bool CheckMonthInput(string month) {
+            return (Array.IndexOf(months, month) > -1);
 
         }
 
-        void checkMonths() {
-
+        void Zeller() {
+            GetInput();
         }
 
         static void Main(string[] args)
         {
-            new ZellerBirthday().zeller();
+            new ZellerBirthday().Zeller();
         }
     }
 }
