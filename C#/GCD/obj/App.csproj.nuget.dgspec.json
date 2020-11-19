@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Teagan\\App\\C#\\App.csproj": {}
+    "C:\\Users\\Teagan\\App\\C#\\GCD\\App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Teagan\\App\\C#\\App.csproj": {
+    "C:\\Users\\Teagan\\App\\C#\\GCD\\App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Teagan\\App\\C#\\App.csproj",
+        "projectUniqueName": "C:\\Users\\Teagan\\App\\C#\\GCD\\App.csproj",
         "projectName": "App",
-        "projectPath": "C:\\Users\\Teagan\\App\\C#\\App.csproj",
+        "projectPath": "C:\\Users\\Teagan\\App\\C#\\GCD\\App.csproj",
         "packagesPath": "C:\\Users\\Teagan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Teagan\\App\\C#\\obj\\",
+        "outputPath": "C:\\Users\\Teagan\\App\\C#\\GCD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Teagan\\AppData\\Roaming\\NuGet\\NuGet.Config"

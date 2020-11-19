@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Teagan\\App\\C#\\App.csproj",
+      "projectUniqueName": "C:\\Users\\Teagan\\App\\C#\\hm\\App.csproj",
       "projectName": "App",
-      "projectPath": "C:\\Users\\Teagan\\App\\C#\\App.csproj",
+      "projectPath": "C:\\Users\\Teagan\\App\\C#\\hm\\App.csproj",
       "packagesPath": "C:\\Users\\Teagan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Teagan\\App\\C#\\obj\\",
+      "outputPath": "C:\\Users\\Teagan\\App\\C#\\hm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Teagan\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -35,9 +35,9 @@ namespace App
         
         // Makes sure that the users input is positive and an integer.
         /// <param name="n">The user's input.</param>
-        bool checkInput(string n) {
+        bool checkInput(string str) {
             int value;
-            if (int.TryParse(n, out value)) {
+            if (int.TryParse(str, out value)) {
                 if(value > 0) {
                     return true;
                 }
