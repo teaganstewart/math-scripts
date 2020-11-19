@@ -8,37 +8,46 @@ namespace App
         int second;
 
         // Gets the user's input for the gcd calculation. Requires to positive integers.
-        void GetInput() {
-            
-            for(int i = 0; i < 2; i++) {
-                Console.Write("Enter the " + ((i ==0) ? "first" : "second") + " number- "); 
-                
+        void GetInput()
+        {
+
+            for (int i = 0; i < 2; i++)
+            {
+                Console.Write("Enter the " + ((i == 0) ? "first" : "second") + " number- ");
+
                 string s = Console.ReadLine();
-                while(!CheckInput(s)) {
+                while (!CheckInput(s))
+                {
                     Console.WriteLine("Not a correct number. Please enter a number > 0.");
                     Console.Write("Enter the first number- ");
-                    s = Console.ReadLine();  
+                    s = Console.ReadLine();
                 }
 
-                if( i == 0 ) {
+                if (i == 0)
+                {
                     first = Int32.Parse(s);
-                } else {
+                }
+                else
+                {
                     second = Int32.Parse(s);
                 }
             }
 
-                int temp = Math.Max(first, second);
-                second = Math.Min(first, second);
-                first = temp;
+            int temp = Math.Max(first, second);
+            second = Math.Min(first, second);
+            first = temp;
         }
 
-        
+
         // Makes sure that the users input is positive and an integer.
         /// <param name="n">The user's input.</param>
-        bool CheckInput(string str) {
+        bool CheckInput(string str)
+        {
             int value;
-            if (int.TryParse(str, out value)) {
-                if(value > 0) {
+            if (int.TryParse(str, out value))
+            {
+                if (value > 0)
+                {
                     return true;
                 }
             }
@@ -46,38 +55,43 @@ namespace App
         }
 
         // Calculates the Remainder from the division of two numbers.
-        int GetRemainder(int a, int b) {
-            
-            while(a >= b) {
-                a-=b;
+        int GetRemainder(int a, int b)
+        {
+
+            while (a >= b)
+            {
+                a -= b;
             }
 
             return a;
         }
 
         // Calculates the result of dividing two numbers.
-        int GetDivision(int a, int b) {
-            int c = a/b;
+        int GetDivision(int a, int b)
+        {
+            int c = a / b;
             return c;
         }
 
         // Carries out the euclidian algorithm using the remainder and division algorithms.
-        void Gcd() {
+        void Gcd()
+        {
             GetInput();
 
             int remainder = GetRemainder(first, second);
             int divisor = GetDivision(first, second);
 
-            while(remainder != 0) {
+            while (remainder != 0)
+            {
                 first = second;
                 second = remainder;
 
                 remainder = GetRemainder(first, second);
                 divisor = GetDivision(first, second);
-                
+
             }
 
-            int answer = first/divisor;
+            int answer = first / divisor;
             Console.WriteLine("Answer- " + answer);
             Console.WriteLine("Remainder- " + GetRemainder(first, second));
             Console.WriteLine("Division- " + GetDivision(first, second));
