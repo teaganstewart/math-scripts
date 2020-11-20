@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "9sc1JvBR4eVF7xNkcSihoTHbWmZUAdqcv1D1OsVLHLiKjeD5Cs9mdS8gZMbmCRRgphdt8aOwzzbMxyOOedTrYA==",
+  "dgSpecHash": "0dbRGtow2Afx4G8hXkrGcMcQ3qi1Qv79PlktAfTcUXtSE/8qmzggVRZzHxIWzGzfnc8gJpAiIYWfTyPIoSYbPw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Teagan\\App\\c#\\GCD\\Gcd.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Teagan\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\Teagan\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",
     "C:\\Users\\Teagan\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\Teagan\\.nuget\\packages\\microsoft.net.test.sdk\\16.7.1\\microsoft.net.test.sdk.16.7.1.nupkg.sha512",

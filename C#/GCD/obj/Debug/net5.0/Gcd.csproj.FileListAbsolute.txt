@@ -3,7 +3,6 @@ C:\Users\Teagan\App\C#\GCD\bin\Debug\net5.0\testhost.exe
 C:\Users\Teagan\App\C#\GCD\bin\Debug\net5.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Users\Teagan\App\C#\GCD\bin\Debug\net5.0\xunit.runner.reporters.netcoreapp10.dll
 C:\Users\Teagan\App\C#\GCD\bin\Debug\net5.0\xunit.runner.utility.netcoreapp10.dll
-C:\Users\Teagan\App\C#\GCD\bin\Debug\net5.0\Gcd.exe
 C:\Users\Teagan\App\C#\GCD\bin\Debug\net5.0\Gcd.deps.json
 C:\Users\Teagan\App\C#\GCD\bin\Debug\net5.0\Gcd.runtimeconfig.json
 C:\Users\Teagan\App\C#\GCD\bin\Debug\net5.0\Gcd.runtimeconfig.dev.json
