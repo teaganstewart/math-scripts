@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Teagan\\App\\C#\\GCD\\Gcd.csproj": {}
+    "C:\\Users\\Teagan\\App\\c#\\GCD\\Gcd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Teagan\\App\\C#\\GCD\\Gcd.csproj": {
+    "C:\\Users\\Teagan\\App\\c#\\GCD\\Gcd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Teagan\\App\\C#\\GCD\\Gcd.csproj",
+        "projectUniqueName": "C:\\Users\\Teagan\\App\\c#\\GCD\\Gcd.csproj",
         "projectName": "Gcd",
-        "projectPath": "C:\\Users\\Teagan\\App\\C#\\GCD\\Gcd.csproj",
+        "projectPath": "C:\\Users\\Teagan\\App\\c#\\GCD\\Gcd.csproj",
         "packagesPath": "C:\\Users\\Teagan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Teagan\\App\\C#\\GCD\\obj\\",
+        "outputPath": "C:\\Users\\Teagan\\App\\c#\\GCD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Teagan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -41,6 +41,12 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.7.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.0, )"
             },
             "xunit": {
               "target": "Package",
